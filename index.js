@@ -9,7 +9,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: ['http://192.168.178.4:3002', 'http://192.168.0.59:8001'],
+		origin: ['http://192.168.0.59:3001', 'http://192.168.0.59:8001'],
 		credentials: true,
 	},
 });
@@ -52,5 +52,5 @@ io.use((socket, next) => {
 });
 
 server.listen(3001, () => {
-	console.log('server running at http://192.168.0.245:8081');
+	console.log('server is running');
 });
